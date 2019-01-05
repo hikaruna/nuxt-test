@@ -5,6 +5,7 @@ services:
     command: npm run dev
     volumes:
       - .:/usr/src/app
+      - ~/.npm:/root/.npm
     environment:
       - NUXT_HOST=0.0.0.0
     ports:
