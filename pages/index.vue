@@ -1,15 +1,22 @@
 <template>
-  <h1>hello {{ message }}: {{ title }}</h1>
+  <section>
+    <h1>hello {{ message }}</h1>
+    <button @click="increment">{{ counter }}</button>
+  </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator';
 
 @Component
 export default class extends Vue {
   message = "world"
-  get title() {
-    return this.$store.state.title
+  get counter() {
+    return this.$store.state.counter;
+  }
+
+  increment() {
+    this.$store.commit('increment');
   }
 }
 </script>
