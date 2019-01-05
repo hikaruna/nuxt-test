@@ -6,4 +6,4 @@
 </template>
 
 <style src="./style.css" scoped></style>
-<script src="./script.js"></script>
+<script src="./script.ts"></script>

@@ -1,4 +1,6 @@
-export default {
+import Vue from "vue";
+
+export default Vue.extend({
   data: () => ({
     message: "hello world"
   }),
@@ -10,4 +12,4 @@ export default {
       this.$store.commit('increment')
     }
   }
-}
+})
