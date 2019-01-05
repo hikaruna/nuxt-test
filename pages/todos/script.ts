@@ -1,17 +1,10 @@
-import Vue from 'vue'
-import { mapMutations } from 'vuex'
+import { Component, Vue } from 'nuxt-property-decorator'
 
-export default Vue.extend({
-  computed: {
-    todos () { return this.$store.state.todos.list }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
-    },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    })
+@Component({})
+export default class extends Vue {
+  get todos() { return this.$store.state.todos.list }
+  addTodo(e) {
+    this.$store.commit('todos/add', e.target.value)
+    e.target.value = ''
   }
-})
+}

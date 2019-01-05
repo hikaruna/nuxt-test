@@ -1,3 +1,3 @@
-modules: [
-  "~/modules/typescript.js"
-]
+module.exports = {
+  modules: ["nuxt-typescript"]
+}
