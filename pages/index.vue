@@ -1,6 +1,9 @@
 <template>
   <section>
-    <h1>helloworld</h1>
-    <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+    <h1>{{ message }}</h1>
+    <button @click="increment">{{ counter }}</button>
   </section>
 </template>
+
+<style src="./style.css" scoped></style>
+<script src="./script.js"></script>
