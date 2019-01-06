@@ -12,6 +12,8 @@
     "strict": true,
     "sourceMap": true,
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true
   }
 }

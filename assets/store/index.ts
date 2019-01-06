@@ -1,7 +1,7 @@
-import wait from '~/assets/wait'
+import State from "./state";
 
 export default class Store {
-  private state: State
+  private state: State;
 
   constructor({counter}: {counter: number}) {
     this.state = new State(counter);
@@ -11,28 +11,11 @@ export default class Store {
     return this.state.counter;
   }
 
-  increment(): void {
+  public increment(): void {
     this.state = this.state.incremented();
   }
 
-  async incrementAsync(): Promise<void> {
+  public async incrementAsync(): Promise<void> {
     this.state = await this.state.incrementedAsync();
-  }
-}
-
-class State {
-  public readonly counter: number
-
-  constructor(counter: number) {
-    this.counter = counter;
-  }
-
-  incremented(): State {
-    return new State(this.counter + 1);
-  }
-
-  async incrementedAsync(): Promise<State> {
-    await wait(1000);
-    return this.incremented();
   }
 }
