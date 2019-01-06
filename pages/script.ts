@@ -10,4 +10,8 @@ export default class extends Vue {
   increment() {
     this.$store.commit('increment');
   }
+
+  incrementAsync() {
+    this.$store.dispatch('incrementAsync');
+  }
 }
