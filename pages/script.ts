@@ -1,17 +1,18 @@
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class extends Vue {
-  message = "world"
+  public message = "world";
+
   get counter() {
     return this.$store.state.counter;
   }
 
-  increment() {
-    this.$store.commit('increment');
+  public increment() {
+    this.$store.commit("increment");
   }
 
-  incrementAsync() {
-    this.$store.dispatch('incrementAsync');
+  public incrementAsync() {
+    return this.$store.dispatch("incrementAsync");
   }
 }

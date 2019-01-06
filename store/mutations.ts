@@ -1,5 +1,5 @@
 export default {
-  increment (state: any) {
+  increment(state: any) {
     state.counter++;
-  }
-}
+  },
+};

@@ -1,7 +1,8 @@
+import wait from '~/assets/wait';
+
 export default {
-  incrementAsync({ commit }: { commit: (name: string) => void }) {
-    setTimeout(() => {
-      commit('increment')
-    }, 1000)
+  async incrementAsync({ commit }: { commit: (name: string) => void }) {
+    await wait(1000);
+    commit('increment');
   }
 }
